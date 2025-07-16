@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Define a bean for the Country class -->
+    <!-- IMPORTANT: Update the class attribute to the new package name -->
+    <bean id="country" class="com.cognizant.Ex2.Country">
+        <!-- Set the 'code' property of the Country bean -->
+        <property name="code" value="IN" />
+        <!-- Set the 'name' property of the Country bean -->
+        <property name="name" value="India" />
+    </bean>
+
+</beans>

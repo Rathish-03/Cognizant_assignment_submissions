@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!-- Console Appender to log messages to the console -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <!-- Pattern for logging output: timestamp, thread, level, logger name, message, newline -->
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Root logger configuration -->
+    <root level="debug"> <!-- Set the root logging level to DEBUG -->
+        <appender-ref ref="STDOUT" /> <!-- Reference the console appender -->
+    </root>
+
+    <!-- Specific logger for Spring Framework to avoid excessive debug logs from Spring itself -->
+    <logger name="org.springframework" level="info" />
+    <!-- Specific logger for the application package to ensure debug logs are visible -->
+    <logger name="com.cognizant.springlearn" level="debug" />
+
+</configuration>
